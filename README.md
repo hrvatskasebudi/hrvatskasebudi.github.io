@@ -14,3 +14,7 @@ Otvori stranicu grada, nađi komentar "NOVA OBJAVA", kopiraj blok `news-item`, z
 
 ## Aktivacija grada
 Svih 5 stranica već postoje. U `nav.js` promijeni `"uskoro"` u `"aktivno"` za taj grad. Izbornik se mijenja na svim stranicama odjednom.
+
+## Blog (nacionalni tekstovi)
+- `blog.html` – popis tekstova, `clanak-*.html` – pojedinačni tekstovi.
+- **Novi tekst:** kopiraj bilo koji `clanak-*.html`, promijeni naslov i sadržaj (`<h2>` za podnaslove, `<p>` za odlomke), spremi pod novim imenom. Zatim u `blog.html` kopiraj jedan blok `<a class="post">` na vrh i prepravi.

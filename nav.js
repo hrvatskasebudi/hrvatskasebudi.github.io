@@ -14,7 +14,7 @@ var GRADOVI = [
   var L = [["#plakat","01. Proglas"],["#eu","02. EU & Sustav"],["#seljaci","03. Seljaci"],["#voda","04. Komunalni red"],["#moci","05. Zona Moći"]];
   var h = '<div class="nav-links">';
   L.forEach(function (l) { h += '<a href="' + home + l[0] + '">' + l[1] + '</a>'; });
-  h += '</div><div class="city-terminal"><div class="term-header">// LOKALNI FRONTOVI</div>';
+  h += '<a href="blog.html">06. Blog</a></div><div class="city-terminal"><div class="term-header">// LOKALNI FRONTOVI</div>';
   GRADOVI.forEach(function (g) {
     var ime = g[0].toUpperCase();
     if (g[2] === "hq") h += '<a href="' + g[1] + '" class="city-active"><span class="blink">_</span>' + ime + ' [HQ]</a>';

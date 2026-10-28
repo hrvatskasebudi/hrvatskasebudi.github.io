@@ -311,3 +311,37 @@ footer{flex-direction:column;gap:15px;align-items:flex-start}
 }
 
 .news-item img{max-width:100%;display:block;margin-top:12px;border:1px solid var(--border)}
+
+/* BLOG */
+.read-more{display:inline-block;margin-top:20px;color:var(--red);font-family:'Montserrat',sans-serif;font-weight:900;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:transform .2s}
+.read-more:hover{transform:translateX(6px)}
+.blog-cta{max-width:900px;margin-top:120px;border:1px solid var(--red);background:rgba(255,30,56,.03);padding:35px}
+.blog-cta h2{font-family:'Montserrat',sans-serif;font-weight:900;text-transform:uppercase;font-size:clamp(20px,3vw,28px);margin-bottom:10px}
+.blog-cta p{color:var(--muted);font-size:14px;line-height:1.7}
+.post-list{max-width:900px}
+.post{display:flex;gap:30px;padding:45px 0;border-top:1px dashed var(--border);text-decoration:none;color:inherit}
+.post:last-child{border-bottom:1px dashed var(--border)}
+.post-num{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(40px,7vw,72px);line-height:1;color:transparent;-webkit-text-stroke:1px var(--red);min-width:90px}
+.post h2{font-family:'Montserrat',sans-serif;font-weight:900;text-transform:uppercase;font-size:clamp(20px,3vw,28px);line-height:1.2;color:#fff;margin-bottom:8px;transition:color .2s}
+.post:hover h2{color:var(--red)}
+.post-sub{font-family:'Special Elite',cursive;color:var(--red)!important;font-size:16px!important;margin-bottom:12px}
+.post p{font-size:14px;color:var(--muted);line-height:1.8}
+.post .fact-box{margin-top:16px}
+.article{max-width:760px;margin-top:40px}
+.article h1{font-family:'Montserrat',sans-serif;font-weight:900;text-transform:uppercase;font-size:clamp(26px,4.4vw,46px);line-height:1.1;letter-spacing:-.5px;margin:10px 0 16px}
+.article .subtitle{font-family:'Special Elite',cursive;font-size:20px;color:var(--red);margin-bottom:12px}
+.article .byline{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding-bottom:30px;margin-bottom:40px;border-bottom:1px dashed var(--border)}
+.article p{font-size:16px;line-height:1.95;color:#c9c9d1;margin-bottom:22px}
+.article p.lead{font-size:18px;color:var(--text);border-left:3px solid var(--red);padding-left:20px}
+.article h2{font-family:'Montserrat',sans-serif;font-weight:900;text-transform:uppercase;font-size:clamp(17px,2.4vw,22px);line-height:1.25;color:#fff;margin:50px 0 18px;letter-spacing:.3px}
+.article h2::before{content:"// ";color:var(--red)}
+.article ul{list-style:none;margin:0 0 26px}
+.article li{position:relative;padding-left:26px;margin-bottom:18px;font-size:16px;line-height:1.9;color:#c9c9d1}
+.article li::before{content:"";position:absolute;left:0;top:.9em;width:12px;height:2px;background:var(--red)}
+.article strong{color:#fff}
+.article em{color:#e6e6ee}
+.post-nav{max-width:760px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:70px;padding-top:30px;border-top:2px solid var(--red)}
+.post-nav a{color:var(--muted);text-decoration:none;font-size:12px;letter-spacing:1px;text-transform:uppercase;max-width:340px;line-height:1.6;transition:color .2s}
+.post-nav a:hover{color:var(--red)}
+.post-nav small{display:block;color:var(--red);font-family:'Montserrat',sans-serif;font-weight:900;letter-spacing:3px;font-size:10px}
+@media(max-width:600px){.post{flex-direction:column;gap:10px}}
