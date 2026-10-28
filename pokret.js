@@ -3,8 +3,8 @@
 var HSB = {
   OPERATIVNA_BAZA: 4249,   // statični prikaz operativne mreže (objavi samo ako je točan!)
   BROJAC_START: 1342,      // početna baza živog brojača
-  FORM_ENDPOINT: https://script.google.com/macros/s/AKfycbxw5r0ho824WnS6Inc10lh9q8lHiKsiyXI6ab-JADA4npaZANBfnFWXblEsIkkkryh9EQ/exec
-  COUNT_ENDPOINT: https://script.google.com/macros/s/AKfycbxw5r0ho824WnS6Inc10lh9q8lHiKsiyXI6ab-JADA4npaZANBfnFWXblEsIkkkryh9EQ/exec
+  FORM_ENDPOINT: "",       // URL za slanje prijava (Google Apps Script / Formspree) – vidi UPUTE
+  COUNT_ENDPOINT: ""       // URL koji vraća {"count": N} = broj STVARNIH prijava
 };
 (function () {
   var fmt = function (n) { return Number(n).toLocaleString("hr-HR"); };
@@ -52,6 +52,7 @@ var HSB = {
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
+    if (!form.reportValidity()) return;                   // obavezna polja i privola
     var fd = new FormData(form);
     if (fd.get("web")) { return; }                       // honeypot (botovi)
     if (!HSB.FORM_ENDPOINT) { say("Prijave se još nisu aktivirale. Pokušaj ponovno uskoro.", false); return; }
@@ -61,13 +62,16 @@ var HSB = {
     body.set("podrucja", fd.getAll("podrucja").join(", "));
     body.set("tip", opT.checked ? "operativac" : "podrska");
     body.set("vrijeme", new Date().toISOString());
-    fetch(HSB.FORM_ENDPOINT, { method: "POST", body: body, headers: { "Accept": "application/json" } })
-      .then(function (r) { if (!r.ok) throw 0; return r.text(); })
-      .then(function () {
-        form.innerHTML = '<div class="pk-thanks"><h3>Prijava primljena.</h3><p>Hvala. Upute stožera stižu na tvoj e-mail. Pokaži ovu stranicu još jednoj osobi.</p></div>';
-        setTotal(real + 1);                               // samo STVARNA prijava povećava brojač
+    function fail(t) { b.disabled = false; b.textContent = "Pošalji prijavu"; say(t || "Slanje nije uspjelo. Provjeri vezu i pokušaj ponovno.", false); }
+    fetch(HSB.FORM_ENDPOINT, { method: "POST", body: body })
+      .then(function (r) { return r.text(); })
+      .then(function (txt) {
+        var d; try { d = JSON.parse(txt); } catch (x) { console.error("HSB: neočekivan odgovor poslužitelja:", txt.slice(0, 300)); return fail("Poslužitelj nije vratio valjan odgovor. Javite administratoru."); }
+        if (!d.ok) { console.error("HSB: prijava odbijena:", d); return fail("Prijava nije prihvaćena. Provjeri sva obavezna polja i privolu."); }
+        form.innerHTML = '<div class="pk-thanks"><h3>' + (d.duplikat ? "Već si prijavljen/a." : "Prijava primljena.") + '</h3><p>' + (d.duplikat ? "Ovaj e-mail već je u našoj bazi. Hvala što si uz nas." : "Hvala. Upute stožera stižu na tvoj e-mail. Pokaži ovu stranicu još jednoj osobi.") + '</p></div>';
+        if (!d.duplikat) setTotal(real + 1);              // samo STVARNA nova prijava povećava brojač
         var t = document.getElementById("pristupnica"); if (t) t.scrollIntoView({ behavior: "smooth", block: "start" });
       })
-      .catch(function () { b.disabled = false; b.textContent = "Pošalji prijavu"; say("Slanje nije uspjelo. Provjeri vezu i pokušaj ponovno.", false); });
+      .catch(function (err) { console.error("HSB: greška mreže/CORS:", err); fail(); });
   });
 })();
