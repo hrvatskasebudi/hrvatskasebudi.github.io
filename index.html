@@ -10,6 +10,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="slike/favicon-192.png">
 <link rel="apple-touch-icon" href="slike/apple-touch-icon.png">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="pokret.css">
 <style>
 .hero-head{display:flex;align-items:center;gap:2rem;flex-wrap:wrap}
 .hero-logo{width:clamp(140px,18vw,240px);height:auto;flex:none;transform:rotate(-4deg)}
@@ -36,6 +37,66 @@
             Mi nismo klasična stranka – mi smo neovisni građanski otpor na terenu. Ali ako institucije i dalje budu ignorirale glas naroda, ovaj je pokret spreman prerasti u političku silu, izaći na izbore i preuzeti poluge upravljanja državnim i gradskim sustavima. Pripremamo teren.
         </div>
     </section>
+<!-- POKRET: DVOSTRUKI BROJAČ + PRISTUPNICA -->
+<section id="pokret" class="pk">
+<div class="pk-wrap">
+<span class="pk-tag">// Mreža pokreta</span>
+<h2>Nismo sami. Samo šutimo svatko u svojoj kuhinji.</h2>
+<div class="pk-grid">
+<div class="pk-block pk-base">
+<span class="pk-tag">// Operativna baza</span>
+<div class="pk-big"><span id="pk-base">4.249</span><sup>+</sup></div>
+<p class="pk-label">aktivnih ljudi na terenu</p>
+<p class="pk-note">Identiteti operativne mreže ne objavljuju se javno – zbog političkog pritiska i zaštite obitelji.</p>
+</div>
+<div class="pk-block pk-live">
+<span class="pk-tag"><span class="pk-pulse"></span>Živi brojač podrške</span>
+<div class="pk-big" id="pk-count" aria-live="polite">1.342</div>
+<p class="pk-label">građana koji su se prijavili</p>
+<div class="pk-bar"><i id="pk-bar"></i></div>
+<p class="pk-goal" id="pk-goal">Sljedeći cilj: 2.000</p>
+</div>
+</div>
+
+<div class="pk-form" id="pristupnica">
+<span class="pk-tag">// Pristupnica</span>
+<h3>Upiši se. Ne moraš otkriti puno ime.</h3>
+<p class="pk-sub">Dovoljni su inicijali ili nadimak. E-mail je obvezan jer samo tamo šaljemo interne upute stožera. Ne objavljuje se i ne dijeli.</p>
+<form id="pk-form" novalidate="false" autocomplete="on">
+<div class="pk-hp" aria-hidden="true"><label>Web <input type="text" name="web" tabindex="-1" autocomplete="off"></label></div>
+<div class="pk-row">
+<div class="pk-f"><label for="f-ime">Ime, inicijali ili nadimak <em>*</em></label><input id="f-ime" name="ime" type="text" required maxlength="60" placeholder="npr. M.K. ili Gorički"></div>
+<div class="pk-f"><label for="f-grad">Grad / kvart <em>*</em></label><input id="f-grad" name="grad" type="text" required maxlength="80" placeholder="npr. Velika Gorica, Trnje"></div>
+</div>
+<div class="pk-row">
+<div class="pk-f"><label for="f-struja">Struja / područje (opcionalno)</label>
+<select id="f-struja" name="struja"><option value="">– još ne znam –</option><option>Mirovine i stariji</option><option>Djeca, invalidi, solidarnost</option><option>Stanovanje i mladi</option><option>Sigurnost i pravosuđe</option><option>Zdravstvo</option><option>Poljoprivreda i selo</option><option>Suverenitet, voda, potrošači</option><option>Uprava i proračun</option><option>Obrazovanje</option><option>Ekonomija i rad</option></select></div>
+<div class="pk-f"><label for="f-email">E-mail <em>*</em></label><input id="f-email" name="email" type="email" required maxlength="120" placeholder="za interne upute stožera" inputmode="email"></div>
+</div>
+<label class="pk-check"><input type="checkbox" id="pk-op-toggle"><span><strong>Želim direktan angažman</strong> – spreman/spremna sam raditi na terenu.</span></label>
+<div class="pk-op" id="pk-op" hidden>
+<div class="pk-f"><label for="f-kontakt">Kontakt za brzu vezu (Signal / telefon)</label><input id="f-kontakt" name="kontakt" type="text" maxlength="60" placeholder="neobavezno"></div>
+<div class="pk-f"><span class="pk-legend">Što mogu doprinijeti</span>
+<div class="pk-skills">
+<label class="pk-check"><input type="checkbox" name="podrucja" value="teren"><span>Terenski rad i letci</span></label>
+<label class="pk-check"><input type="checkbox" name="podrucja" value="potpisi"><span>Prikupljanje potpisa</span></label>
+<label class="pk-check"><input type="checkbox" name="podrucja" value="pravo"><span>Pravna pomoć</span></label>
+<label class="pk-check"><input type="checkbox" name="podrucja" value="it"><span>IT i web</span></label>
+<label class="pk-check"><input type="checkbox" name="podrucja" value="mediji"><span>Mediji i dizajn</span></label>
+<label class="pk-check"><input type="checkbox" name="podrucja" value="logistika"><span>Logistika i prijevoz</span></label>
+</div></div>
+<div class="pk-f"><label for="f-dost">Dostupnost</label><select id="f-dost" name="dostupnost"><option value="">– odaberi –</option><option>Nekoliko sati tjedno</option><option>Vikendom</option><option>Gotovo svaki dan</option></select></div>
+<div class="pk-f"><label for="f-por">Poruka stožeru</label><textarea id="f-por" name="poruka" maxlength="600"></textarea></div>
+</div>
+<label class="pk-check"><input type="checkbox" name="privola" value="da" required><span>Pristajem da se moji podaci koriste isključivo za komunikaciju pokreta „Hrvatska se budi“. Mogu zatražiti brisanje u svakom trenutku.</span></label>
+<button class="pk-btn" type="submit">Pošalji prijavu</button>
+<div class="pk-msg" id="pk-msg" role="status"></div>
+<p class="pk-priv">Ne tražimo OIB, adresu ni dokumente. Nadimak je dovoljan.</p>
+</form>
+</div>
+</div>
+</section>
+<a class="pk-sticky" href="#pristupnica">Pridruži se pokretu</a>
 <!-- TOK MANIFESTA -->
     <div class="manifesto-stream">
 
@@ -97,6 +158,13 @@
 
     </div>
 
+<div class="pg-cta">
+<span class="stream-number">// Nacionalni program</span>
+<h2>10 stupova. Jedan plan za državu.</h2>
+<p>Mirovine, zdravstvo, stanovanje, sigurnost, selo, voda, proračun, škole i standard. Cijeli program na jednom mjestu.</p>
+<a class="pk-btn" href="program.html">Pročitaj program &rarr;</a>
+</div>
+
 <div class="blog-cta">
 <span class="stream-number">// Blog</span>
 <h2>Blog. Cijeli sustav objašnjen.</h2>
@@ -118,5 +186,6 @@
 <div>Nema povratka natrag. Ulica je progovorila.</div>
 </footer>
 <script src="nav.js"></script>
+<script src="pokret.js"></script>
 </body>
 </html>
