@@ -75,3 +75,9 @@ body{padding-bottom:3.5rem}
 .pg-flag{display:inline-block;font-family:'Space Mono',monospace;font-size:.72rem;text-transform:uppercase;background:var(--pk-red);color:#fff;padding:.15rem .5rem;margin:0 .4rem .4rem 0}
 .pg-close{background:var(--pk-panel);border:1px solid var(--pk-line);border-top:5px solid var(--pk-red);padding:clamp(1.2rem,4vw,2.2rem);margin-top:2rem}
 @media(prefers-reduced-motion:reduce){.pk-pulse{animation:none}.pk-bar i{transition:none}}
+/* privatnost */
+.pk-check a,.pg a:not(.pk-btn):not(.pg-index a){color:#fff;text-decoration:underline;text-decoration-color:var(--pk-red)}
+.pg-legal{max-width:78ch}
+.pg-legal h2{font-size:1.15rem;margin:2rem 0 .5rem}
+.pg-legal p,.pg-legal li{color:#ddd}
+.pg-legal .todo{background:#3a2a00;color:#ffd666;padding:0 .3rem}

@@ -53,6 +53,14 @@ var SLOGANI = ["Dosta je šutnje.", "Vrijeme je za red.", "Čitaj zakone. Korist
   h += '</div><div class="slogans">';
   SLOGANI.forEach(function (s) { h += "<span>" + s + "</span>"; });
   h += '</div><p class="sidefoot">Open-source građanski sustav</p></div>';
+
+  // Link na Politiku privatnosti u podnožju svake stranice (ako ga još nema)
+  var ft = document.querySelector("footer");
+  if (ft && !ft.querySelector('a[href="privatnost.html"]')) {
+    var pd = document.createElement("div");
+    pd.innerHTML = '<a href="privatnost.html">Politika privatnosti</a>';
+    ft.appendChild(pd);
+  }
   var box = document.getElementById("side-nav");
   if (box) {
     box.innerHTML = h;
