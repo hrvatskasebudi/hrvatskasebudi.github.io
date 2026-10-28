@@ -3,8 +3,8 @@
 var HSB = {
   OPERATIVNA_BAZA: 4249,   // statični prikaz operativne mreže (objavi samo ako je točan!)
   BROJAC_START: 1342,      // početna baza živog brojača
-  FORM_ENDPOINT: "",       // URL za slanje prijava (Google Apps Script / Formspree) – vidi UPUTE
-  COUNT_ENDPOINT: ""       // URL koji vraća {"count": N} = broj STVARNIH prijava
+  FORM_ENDPOINT: https://script.google.com/macros/s/AKfycbxw5r0ho824WnS6Inc10lh9q8lHiKsiyXI6ab-JADA4npaZANBfnFWXblEsIkkkryh9EQ/exec
+  COUNT_ENDPOINT: https://script.google.com/macros/s/AKfycbxw5r0ho824WnS6Inc10lh9q8lHiKsiyXI6ab-JADA4npaZANBfnFWXblEsIkkkryh9EQ/exec
 };
 (function () {
   var fmt = function (n) { return Number(n).toLocaleString("hr-HR"); };
