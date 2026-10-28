@@ -24,7 +24,7 @@ var SLOGANI = ["Dosta je šutnje.", "Vrijeme je za red.", "Čitaj zakone. Korist
     ["icon", "slike/favicon-192.png", "image/png", "192x192"],
     ["apple-touch-icon", "slike/apple-touch-icon.png", null, null]
   ];
-  FAV.forEach(function (f) {
+  if (!document.querySelector('link[rel~="icon"]')) FAV.forEach(function (f) {
     var l = document.createElement("link");
     l.rel = f[0]; l.href = f[1];
     if (f[2]) l.type = f[2];
