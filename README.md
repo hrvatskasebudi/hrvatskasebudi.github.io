@@ -1,25 +1,16 @@
 # Hrvatska se budi
 
-Statični sajt (HTML/CSS/JS), hostan na GitHub Pages.
+Statični sajt (HTML/CSS) na GitHub Pages. Nema JS-a ni dodatnih mapa.
 
-## Struktura
 - `index.html` – nacionalni proglas + oglasna ploča
-- `gorica.html`, `zagreb.html` – lokalne podstranice (predložak)
-- `style.css` – cijeli dizajn (zaključan)
-- `app.js` – gradi bočni izbornik i vijesti iz JSON-a
-- `data/gradovi.json` – popis gradova (status: hq / active / soon)
-- `data/vijesti.json` – vijesti na glavnoj stranici
+- `gorica.html`, `zagreb.html` – gradovi s blog sekcijom (`#blog`)
+- `nav.js` – izbornik i popis gradova (jedino mjesto za uređivanje)
+- `split.html`, `osijek.html`, `rijeka.html` – pripremljene stranice
+- `style.css` – dizajn (ne dirati)
+- `slike/` – fotografije za objave (napravi mapu kad zatreba)
 
-## Novi grad
-1. U `data/gradovi.json` promijeni `"status":"soon"` u `"active"` i dodaj `"url"`.
-2. Kopiraj `zagreb.html` u `<grad>.html` i promijeni tekst + `data-page`.
-3. Dodaj vijest u `data/vijesti.json`.
+## Nova objava u gradu
+Otvori stranicu grada, nađi komentar "NOVA OBJAVA", kopiraj blok `news-item`, zalijepi iznad prvog, promijeni datum/naslov/tekst.
 
-## Lokalno testiranje
-`python3 -m http.server` pa otvori http://localhost:8000 (JSON se ne učitava preko file://).
-
-## Deploy
-Repo > Settings > Pages > Deploy from branch `main` / root. Domena: Cloudflare DNS + CNAME datoteka.
-
-## Faza 2
-Admin aplikacija treba mijenjati samo `data/*.json` (i tekstove podstranica), nikad `style.css`.
+## Aktivacija grada
+Svih 5 stranica već postoje. U `nav.js` promijeni `"uskoro"` u `"aktivno"` za taj grad. Izbornik se mijenja na svim stranicama odjednom.
