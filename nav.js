@@ -8,22 +8,14 @@ var GRADOVI = [
   ["Osijek", "osijek.html", "uskoro"],
   ["Rijeka", "rijeka.html", "uskoro"]
 ];
-// Slogani u crvenoj traci na vrhu svake stranice
-var SLOGANI = ["Dosta je šutnje", "Vrijeme je za red", "Hrvatska se budi", "Čitaj zakone. Koristi ih.", "Nema povratka natrag"];
+// Slogani u dnu bočnog izbornika
+var SLOGANI = ["Dosta je šutnje.", "Vrijeme je za red.", "Čitaj zakone. Koristi ih."];
 // =====================================================
 (function () {
   var body = document.body;
   var page = body.getAttribute("data-page");
   var home = page === "index" ? "" : "index.html";
   var cur = location.pathname.split("/").pop() || "index.html";
-
-  var chunk = "";
-  SLOGANI.forEach(function (s) { chunk += "<span>" + s + " //</span>"; });
-  var tick = document.createElement("div");
-  tick.className = "ticker";
-  tick.setAttribute("aria-hidden", "true");
-  tick.innerHTML = '<div class="ticker-track">' + chunk + chunk + chunk + chunk + chunk + chunk + "</div>";
-  body.insertBefore(tick, body.firstChild);
 
   var L = [["#plakat","01. Proglas"],["#eu","02. EU & Sustav"],["#seljaci","03. Seljaci"],["#voda","04. Komunalni red"],["#moci","05. Zona Moći"]];
   var h = '<a class="brand" href="index.html">Hrvatska<br><span>se budi</span></a>';
@@ -40,6 +32,8 @@ var SLOGANI = ["Dosta je šutnje", "Vrijeme je za red", "Hrvatska se budi", "Či
     else if (g[2] === "aktivno") h += '<a href="' + g[1] + '" class="city-active' + c + '">&gt; ' + ime + " [AKTIVNO]</a>";
     else h += '<span class="city-pending">- ' + ime + " (USKORO)</span>";
   });
+  h += '</div><div class="slogans">';
+  SLOGANI.forEach(function (s) { h += "<span>" + s + "</span>"; });
   h += '</div><p class="sidefoot">Open-source građanski sustav</p></div>';
   var box = document.getElementById("side-nav");
   if (box) {
