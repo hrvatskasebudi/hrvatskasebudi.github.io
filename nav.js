@@ -17,6 +17,22 @@ var SLOGANI = ["Dosta je šutnje.", "Vrijeme je za red.", "Čitaj zakone. Korist
   var home = page === "index" ? "" : "index.html";
   var cur = location.pathname.split("/").pop() || "index.html";
 
+  // ===== FAVICON ZA CIJELI WEB (jedno mjesto) =====
+  var FAV = [
+    ["icon", "favicon.ico", null, "any"],
+    ["icon", "slike/favicon-32.png", "image/png", "32x32"],
+    ["icon", "slike/favicon-192.png", "image/png", "192x192"],
+    ["apple-touch-icon", "slike/apple-touch-icon.png", null, null]
+  ];
+  FAV.forEach(function (f) {
+    var l = document.createElement("link");
+    l.rel = f[0]; l.href = f[1];
+    if (f[2]) l.type = f[2];
+    if (f[3]) l.setAttribute("sizes", f[3]);
+    document.head.appendChild(l);
+  });
+  // ================================================
+
   var L = [["#plakat","01. Proglas"],["#eu","02. EU & Sustav"],["#seljaci","03. Seljaci"],["#voda","04. Komunalni red"],["#moci","05. Zona Moći"]];
   var h = '<a class="brand" href="index.html">Hrvatska<br><span>se budi</span></a>';
   h += '<button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-body">Izbornik</button>';
