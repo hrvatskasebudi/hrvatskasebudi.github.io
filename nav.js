@@ -35,7 +35,7 @@ var SLOGANI = ["Dosta je šutnje", "Vrijeme je za red", "Hrvatska se budi", "Či
   h += '<div class="city-terminal"><div class="term-header">// LOKALNI FRONTOVI</div>';
   GRADOVI.forEach(function (g) {
     var ime = g[0].toUpperCase();
-    var c = cur === g[1] ? " is-current" : "";
+    var c = (cur === g[1] || cur.indexOf(g[1].replace(".html", "-")) === 0) ? " is-current" : "";
     if (g[2] === "hq") h += '<a href="' + g[1] + '" class="city-active' + c + '"><span class="blink">_</span>' + ime + " [HQ]</a>";
     else if (g[2] === "aktivno") h += '<a href="' + g[1] + '" class="city-active' + c + '">&gt; ' + ime + " [AKTIVNO]</a>";
     else h += '<span class="city-pending">- ' + ime + " (USKORO)</span>";

@@ -132,3 +132,15 @@ body{font-size:17px}
 .stream-item::before{top:-30px}
 }
 @media(prefers-reduced-motion:reduce){.ticker-track,.blink{animation:none}html{scroll-behavior:auto}}
+
+/* DODACI: lokalne inicijative, povezani tekstovi, napomene */
+.list-head{max-width:960px;font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(28px,3.6vw,44px);color:var(--text);margin:0 0 26px}
+.related{margin-top:70px;padding:22px 24px;border:2px solid var(--text);box-shadow:6px 6px 0 var(--red);background:var(--surface)}
+.related span{display:block;font-family:var(--mono);font-weight:700;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:8px}
+.related a{font-family:var(--display);font-size:22px;line-height:1.2;text-transform:uppercase;color:var(--text);text-decoration:none}
+.related a:hover{color:var(--red)}
+.article p.note{font-family:var(--mono);font-size:13px;line-height:1.7;color:var(--muted);border-top:1px solid var(--line);padding-top:20px;margin-top:50px}
+.article li ul{margin:.9em 0 0}
+.article li li{font-size:.94em}
+
+.hero-wall .back-link{display:block;margin-bottom:34px}

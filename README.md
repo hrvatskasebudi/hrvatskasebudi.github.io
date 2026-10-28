@@ -18,3 +18,8 @@ Svih 5 stranica već postoje. U `nav.js` promijeni `"uskoro"` u `"aktivno"` za t
 ## Blog (nacionalni tekstovi)
 - `blog.html` – popis tekstova, `clanak-*.html` – pojedinačni tekstovi.
 - **Novi tekst:** kopiraj bilo koji `clanak-*.html`, promijeni naslov i sadržaj (`<h2>` za podnaslove, `<p>` za odlomke), spremi pod novim imenom. Zatim u `blog.html` kopiraj jedan blok `<a class="post">` na vrh i prepravi.
+
+## Lokalne inicijative (Velika Gorica)
+- `gorica.html` – stranica grada: popis inicijativa + sekcija "Objave" (vijesti).
+- `gorica-*.html` – pojedinačne inicijative (isti dizajn kao članci). Za novu: kopiraj jednu, promijeni sadržaj i u `gorica.html` dodaj blok `<a class="post">`.
+- Pravilo: **dugi, stalni tekstovi** (zahtjevi, nacrti) = vlastita stranica + kartica na stranici grada. **Kratke vijesti** = blok `news-item` u "Objave" grada. **Nacionalna tema** = `clanak-*.html` + `blog.html`.
