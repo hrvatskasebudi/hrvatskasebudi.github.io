@@ -32,7 +32,10 @@
 .hero-head{display:flex;align-items:center;gap:2rem;flex-wrap:wrap}
 .hero-logo{width:clamp(140px,18vw,240px);height:auto;flex:none;transform:rotate(-4deg)}
 .hero-head h1{margin:0;flex:1 1 320px}
-@media(max-width:600px){.hero-head{justify-content:center;text-align:center}}
+.hero-split{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2rem;align-items:stretch}
+.wake-up-box{padding:2.5rem;border:3px solid var(--pk-red);background:var(--pk-panel);color:#fff;font-size:1.1rem;line-height:1.6;display:flex;flex-direction:column;justify-content:center;height:100%;box-shadow:inset 0 0 30px rgba(255,23,68,0.05)}
+.wake-up-box h2{color:var(--pk-red);font-family:'Montserrat',sans-serif;font-weight:900;text-transform:uppercase;font-size:1.5rem;margin:0 0 1rem 0;line-height:1.2}
+@media(max-width:900px){.hero-head{justify-content:center;text-align:center} .hero-split{grid-template-columns:1fr}}
 </style>
 </head>
 <body data-page="index">
@@ -44,22 +47,34 @@
             <img class="hero-logo" src="slike/logo.png" alt="Hrvatska se budi – logo" width="240" height="240">
             <h1>Dosta je šutnje. <br><span>Vrijeme je za red.</span></h1>
         </div>
-        <div class="hero-intro">
-            <strong>Ovo nije još jedan sterilni portal. Ovo je otvoreni sustav stvoren da razbije iluziju nemoći. Nismo plaćenici</strong> niti sluge uskih lobija – mi smo građani koji čitaju zakone, koriste propise i vraćaju državu u ruke onih koji u njoj pošteno žive.
-        </div>
         
-        <!-- DIO O MOGUĆOJ STRANCI / PRERASTANJU U SILU -->
-        <div class="party-hint-box">
-            <span>// Status pokreta i buduća opcija</span>
-            Mi nismo klasična stranka – mi smo neovisni građanski otpor na terenu. Ali ako institucije i dalje budu ignorirale glas naroda, ovaj je pokret spreman prerasti u političku silu, izaći na izbore i preuzeti poluge upravljanja državnim i gradskim sustavima. Pripremamo teren.
-        </div>
-        
-        <!-- NOVA PORUKA O OZBILJNOSTI I STATUTU -->
-        <div style="margin: 1.5rem 0; padding: 1.2rem; border-left: 4px solid var(--pk-red); background: var(--pk-panel); color: #ddd; font-style: italic; font-size: 0.95rem; line-height: 1.6;">
-            <strong>Ovo nije šala, ovo je buđenje!</strong> Tvoj glas ovdje donosi stvarnu promjenu i s pravim brojem odlučnih ljudi nijedan problem nije nerješiv. Naš put je jasan: nakon što okupimo dovoljnu podršku &ndash; jer ovo je borba svih nas &ndash; osnivamo stranku. Prema statutu naše inicijative, svaka jedinica u gradovima imat će svog predstavnika ogranka. Slijedi potpuna mobilizacija za bolji život u svakom gradu. Pridruži se!
-        </div>
+        <!-- PODJELA NA DVA STUPCA -->
+        <div class="hero-split">
+            <!-- LIJEVI STUPAC (Uvod i status) -->
+            <div class="hero-split-left">
+                <div class="hero-intro" style="margin-top: 0;">
+                    <strong>Ovo nije još jedan sterilni portal. Ovo je otvoreni sustav stvoren da razbije iluziju nemoći. Nismo plaćenici</strong> niti sluge uskih lobija – mi smo građani koji čitaju zakone, koriste propise i vraćaju državu u ruke onih koji u njoj pošteno žive.
+                </div>
+                
+                <div class="party-hint-box">
+                    <span>// Status pokreta i buduća opcija</span>
+                    Mi nismo klasična stranka – mi smo neovisni građanski otpor na terenu. Ali ako institucije i dalje budu ignorirale glas naroda, ovaj je pokret spreman prerasti u političku silu, izaći na izbore i preuzeti poluge upravljanja državnim i gradskim sustavima. Pripremamo teren.
+                </div>
+            </div>
 
+            <!-- DESNI STUPAC (Crveni okvir koji tražite) -->
+            <div class="hero-split-right">
+                <div class="wake-up-box">
+                    <h2>Ovo nije šala, ovo je buđenje!</h2>
+                    <p style="margin-bottom: 1rem;">Tvoj glas ovdje donosi stvarnu promjenu i s pravim brojem odlučnih ljudi nijedan problem nije nerješiv.</p>
+                    <p style="margin-bottom: 1rem;">Naš put je jasan: nakon što okupimo dovoljnu podršku &ndash; jer ovo je borba svih nas &ndash; osnivamo stranku. Prema <strong>Statutu</strong> naše inicijative, svaka jedinica u gradovima imat će svog predstavnika ogranka.</p>
+                    <p style="margin-bottom: 1.5rem; font-weight: bold; color: #ddd;">Slijedi potpuna mobilizacija za bolji život u svakom gradu. Pridruži se!</p>
+                    <a href="statut.html" class="pk-btn" style="text-align: center;">Pročitaj Statut Inicijative &rarr;</a>
+                </div>
+            </div>
+        </div>
     </section>
+
 <!-- POKRET: DVOSTRUKI BROJAČ + PRISTUPNICA -->
 <section id="pokret" class="pk">
 <div class="pk-wrap">
@@ -197,7 +212,6 @@
 
 <section class="news-board" id="vijesti">
 <h2>// Oglasna ploča</h2>
-<!-- NOVA VIJEST: kopiraj blok ispod i zalijepi IZNAD prve (najnovije na vrh) -->
 <div class="news-item">
 <time>5.11.2026.</time>
 <strong>Službeni start</strong>
@@ -207,7 +221,7 @@
 <footer>
 <div>// <span>HRVATSKA SE BUDI</span> // OPEN-SOURCE GRAĐANSKI SUSTAV</div>
 <div>Nema povratka natrag. Ulica je progovorila.</div>
-<div><a href="privatnost.html">Politika privatnosti</a></div>
+<div><a href="privatnost.html">Politika privatnosti</a> | <a href="statut.html">Statut</a></div>
 </footer>
 <script src="nav.js"></script>
 <script src="pokret.js"></script>
