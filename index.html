@@ -32,9 +32,12 @@
 .hero-head{display:flex;align-items:center;gap:2rem;flex-wrap:wrap}
 .hero-logo{width:clamp(140px,18vw,240px);height:auto;flex:none;transform:rotate(-4deg)}
 .hero-head h1{margin:0;flex:1 1 320px}
-.hero-split{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2rem;align-items:stretch}
-.wake-up-box{padding:2.5rem;border:3px solid var(--pk-red);background:var(--pk-panel);color:#fff;font-size:1.1rem;line-height:1.6;display:flex;flex-direction:column;justify-content:center;height:100%;box-shadow:inset 0 0 30px rgba(255,23,68,0.05)}
-.wake-up-box h2{color:var(--pk-red);font-family:'Montserrat',sans-serif;font-weight:900;text-transform:uppercase;font-size:1.5rem;margin:0 0 1rem 0;line-height:1.2}
+.hero-split{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem;margin-top:2rem;align-items:stretch}
+.wake-up-box{padding:2rem;border:3px solid var(--pk-red);background:var(--pk-panel);color:#fff;font-size:1.05rem;line-height:1.6;display:flex;flex-direction:column;justify-content:center;height:100%;box-shadow:inset 0 0 30px rgba(255,23,68,0.05)}
+.wake-up-box h2{color:var(--pk-red);font-family:'Montserrat',sans-serif;font-weight:900;text-transform:uppercase;font-size:1.4rem;margin:0 0 1rem 0;line-height:1.2}
+.no-coalition-box{padding:2rem;border:3px solid #333;background:#111;color:#ddd;font-size:0.95rem;line-height:1.6;display:flex;flex-direction:column;justify-content:center;height:100%}
+.no-coalition-box h2{color:#fff;font-family:'Montserrat',sans-serif;font-weight:900;text-transform:uppercase;font-size:1.4rem;margin:0 0 1rem 0;line-height:1.2;letter-spacing:-0.5px}
+@media(max-width:1100px){.hero-split{grid-template-columns:1fr 1fr}}
 @media(max-width:900px){.hero-head{justify-content:center;text-align:center} .hero-split{grid-template-columns:1fr}}
 </style>
 </head>
@@ -48,28 +51,38 @@
             <h1>Dosta je šutnje. <br><span>Vrijeme je za red.</span></h1>
         </div>
         
-        <!-- PODJELA NA DVA STUPCA -->
+        <!-- PODJELA NA TRI STUPCA -->
         <div class="hero-split">
-            <!-- LIJEVI STUPAC (Uvod i status) -->
-            <div class="hero-split-left">
-                <div class="hero-intro" style="margin-top: 0;">
+            <!-- 1. STUPAC (Uvod i status) -->
+            <div class="hero-split-col">
+                <div class="hero-intro" style="margin-top: 0; font-size: 1rem;">
                     <strong>Ovo nije još jedan sterilni portal. Ovo je otvoreni sustav stvoren da razbije iluziju nemoći. Nismo plaćenici</strong> niti sluge uskih lobija – mi smo građani koji čitaju zakone, koriste propise i vraćaju državu u ruke onih koji u njoj pošteno žive.
                 </div>
                 
-                <div class="party-hint-box">
+                <div class="party-hint-box" style="font-size: 0.9rem;">
                     <span>// Status pokreta i buduća opcija</span>
                     Mi nismo klasična stranka – mi smo neovisni građanski otpor na terenu. Ali ako institucije i dalje budu ignorirale glas naroda, ovaj je pokret spreman prerasti u političku silu, izaći na izbore i preuzeti poluge upravljanja državnim i gradskim sustavima. Pripremamo teren.
                 </div>
             </div>
 
-            <!-- DESNI STUPAC (Crveni okvir koji tražite) -->
-            <div class="hero-split-right">
+            <!-- 2. STUPAC (Crveni okvir - Buđenje i Statut) -->
+            <div class="hero-split-col">
                 <div class="wake-up-box">
                     <h2>Ovo nije šala, ovo je buđenje!</h2>
                     <p style="margin-bottom: 1rem;">Tvoj glas ovdje donosi stvarnu promjenu i s pravim brojem odlučnih ljudi nijedan problem nije nerješiv.</p>
                     <p style="margin-bottom: 1rem;">Naš put je jasan: nakon što okupimo dovoljnu podršku &ndash; jer ovo je borba svih nas &ndash; osnivamo stranku. Prema <strong>Statutu</strong> naše inicijative, svaka jedinica u gradovima imat će svog predstavnika ogranka.</p>
-                    <p style="margin-bottom: 1.5rem; font-weight: bold; color: #ddd;">Slijedi potpuna mobilizacija za bolji život u svakom gradu. Pridruži se!</p>
-                    <a href="statut.html" class="pk-btn" style="text-align: center;">Pročitaj Statut Inicijative &rarr;</a>
+                    <p style="margin-bottom: 1.5rem; font-weight: bold; color: #fff;">Slijedi potpuna mobilizacija za bolji život u svakom gradu. Pridruži se!</p>
+                    <a href="statut.html" class="pk-btn" style="text-align: center; padding: 0.8rem;">Pročitaj Statut Inicijative &rarr;</a>
+                </div>
+            </div>
+            
+            <!-- 3. STUPAC (Novi tamni okvir - Nema koalicija) -->
+            <div class="hero-split-col">
+                <div class="no-coalition-box">
+                    <h2>Zabrana koaliranja. Točka.</h2>
+                    <p style="margin-bottom: 1rem;">Ne vjerujete više političarima i lažnim spasiteljima? S pravom.</p>
+                    <p style="margin-bottom: 1rem;">Naš stav je jasan: <strong>nema koalicija, nema kompromisa i nema trgovine s postojećim strankama.</strong> Nitko od njih nema utjecaja na nas.</p>
+                    <p>Mogu nas podržati ako žele, ali suradnja i prodaja obraza ne dolaze u obzir. Naš jedini saveznik ste vi. Nećemo vam okrenuti leđa &ndash; idemo dosljedno do kraja, da vratimo dostojanstvo i državu narodu!</p>
                 </div>
             </div>
         </div>
