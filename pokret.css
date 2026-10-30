@@ -81,3 +81,5 @@ body{padding-bottom:3.5rem}
 .pg-legal h2{font-size:1.15rem;margin:2rem 0 .5rem}
 .pg-legal p,.pg-legal li{color:#ddd}
 .pg-legal .todo{background:#3a2a00;color:#ffd666;padding:0 .3rem}
+
+.pg-sub{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(1.05rem,2.2vw,1.35rem);text-transform:uppercase;color:#fff;margin:2.4rem 0 .5rem;padding-top:1.4rem;border-top:2px dashed var(--pk-line)}
