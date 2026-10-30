@@ -40,12 +40,17 @@
 .no-coalition-box h2{color:#fff;font-family:'Montserrat',sans-serif;font-weight:900;text-transform:uppercase;font-size:1.4rem;margin:0 0 1rem 0;line-height:1.2;letter-spacing:-0.5px}
 .target-box{padding:2.2rem;border:3px solid #555;background:#1a1a1a;color:#ccc;font-size:1.05rem;line-height:1.6;display:flex;flex-direction:column;justify-content:center;height:100%}
 .target-box h2{color:#ffc107;font-family:'Montserrat',sans-serif;font-weight:900;text-transform:uppercase;font-size:1.4rem;margin:0 0 1rem 0;line-height:1.2;letter-spacing:-0.5px}
-.movement-box{grid-column:1/-1;padding:2.6rem;border:3px solid var(--pk-red);background:linear-gradient(135deg,#1a0a0e 0%,#111 100%);color:#eee;font-size:1.1rem;line-height:1.7;box-shadow:inset 0 0 40px rgba(255,23,68,0.10)}
-.movement-box h2{color:var(--pk-red);font-family:'Montserrat',sans-serif;font-weight:900;text-transform:uppercase;font-size:clamp(1.6rem,4vw,2.6rem);margin:0 0 1.2rem 0;line-height:1.1}
-.movement-box p{margin:0 0 1rem 0;max-width:80ch}
-.movement-box .fact-box{margin:1rem 0 1.4rem 0}
-.movement-box .movement-punch{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(1.1rem,2.2vw,1.5rem);line-height:1.35;color:#fff;border-left:5px solid var(--pk-red);padding-left:1.2rem;margin-top:1.6rem}
-@media(max-width:900px){.hero-head{justify-content:center;text-align:center} .hero-split{grid-template-columns:1fr} .movement-box{padding:1.6rem}}
+.movement-box{margin-top:1.5rem;padding:2rem;border:3px solid var(--pk-red);background:linear-gradient(135deg,#1a0a0e 0%,#111 100%);color:#eee;font-size:1rem;line-height:1.6;box-shadow:inset 0 0 40px rgba(255,23,68,0.10)}
+.movement-box h2{color:var(--pk-red);font-family:'Montserrat',sans-serif;font-weight:900;text-transform:uppercase;font-size:clamp(1.4rem,2.4vw,2rem);margin:0 0 1rem 0;line-height:1.1}
+.movement-box p{margin:0 0 .9rem 0}
+.movement-box .fact-box{margin:.8rem 0 1.2rem 0;gap:7px}
+.movement-box .fact-badge{font-size:10px;padding:5px 8px}
+.movement-box .movement-punch{font-family:'Montserrat',sans-serif;font-weight:900;font-size:1.05rem;line-height:1.35;color:#fff;border-left:5px solid var(--pk-red);padding-left:1rem;margin:1.2rem 0 0 0}
+@media(min-width:1820px){
+.hero-trio{display:grid;grid-template-columns:960px minmax(0,1fr);gap:1.5rem;width:calc(95vw - 340px);align-items:start}
+.hero-trio .movement-box{margin-top:2.5rem;align-self:stretch}
+}
+@media(max-width:900px){.hero-head{justify-content:center;text-align:center} .hero-split{grid-template-columns:1fr}}
 </style>
 </head>
 <body data-page="index">
@@ -58,7 +63,8 @@
             <h1>Dosta je šutnje. <br><span>Vrijeme je za red.</span></h1>
         </div>
         
-        <!-- MOĆNA MREŽA: 4 PRAVOKUTNIKA (2 GORE, 2 DOLJE) + TREĆI RED PREKO CIJELE ŠIRINE -->
+        <!-- MOĆNA MREŽA: 4 PRAVOKUTNIKA (2 GORE, 2 DOLJE) + TREĆI STUPAC S DESNE STRANE -->
+        <div class="hero-trio">
         <div class="hero-split">
             <!-- 1. PRAVOKUTNIK (Uvod i status) -->
             <div class="hero-split-col">
@@ -103,7 +109,8 @@
                 </div>
             </div>
 
-            <!-- 5. TREĆI RED (preko cijele širine): Što narod želi -->
+        </div>
+            <!-- TREĆI STUPAC (desno od postojećih): Što narod želi -->
             <div class="movement-box">
                 <h2>Ovo je što narod želi</h2>
                 <p>Ovo je ono za što se mi, kao narod, borimo i nećemo odustati. Ovo je naš Nacionalni program u 10 stupova i mi ćemo ga provesti. Ne odustajemo, ma koliko težak bio put, i spremni smo na odlučne, ali mirne i zakonite korake.</p>
