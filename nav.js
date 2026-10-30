@@ -40,7 +40,8 @@ var SLOGANI = ["Dosta je šutnje.", "Vrijeme je za red.", "Čitaj zakone. Korist
   L.forEach(function (l) { h += '<a href="' + home + l[0] + '">' + l[1] + "</a>"; });
   var blogOn = cur === "blog.html" || cur.indexOf("clanak-") === 0;
   h += '<a href="program.html"' + (cur === "program.html" ? ' class="is-current"' : "") + ">06. Nacionalni program</a>";
-  h += '<a href="blog.html"' + (blogOn ? ' class="is-current"' : "") + ">07. Blog</a>";
+  h += '<a href="provedba.html"' + (cur === "provedba.html" ? ' class="is-current"' : "") + ">07. Kako provodimo</a>";
+  h += '<a href="blog.html"' + (blogOn ? ' class="is-current"' : "") + ">08. Blog</a>";
   h += '<a href="' + home + '#pristupnica">Pridruži se</a></div>';
   h += '<div class="city-terminal"><div class="term-header">// LOKALNI FRONTOVI</div>';
   GRADOVI.forEach(function (g) {
