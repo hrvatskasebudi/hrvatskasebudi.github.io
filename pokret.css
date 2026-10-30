@@ -16,7 +16,7 @@
 .pk-pulse{display:inline-block;width:.6rem;height:.6rem;border-radius:50%;background:var(--pk-ok);margin-right:.4rem;animation:pkp 1.6s infinite}
 @keyframes pkp{0%{box-shadow:0 0 0 0 rgba(39,196,107,.6)}100%{box-shadow:0 0 0 .8rem rgba(39,196,107,0)}}
 .pk-bar{height:10px;background:#262626;margin:.4rem 0 .3rem;overflow:hidden}
-.pk-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--pk-red2),var(--pk-red));transition:width 1.2s ease}
+.pk-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#1a9b52,var(--pk-ok));transition:width 1.2s ease}
 .pk-goal{font-family:'Space Mono',monospace;font-size:.78rem;color:var(--pk-mute);margin:0}
 /* forma */
 .pk-form{margin-top:1rem;background:var(--pk-panel);border:1px solid var(--pk-line);padding:clamp(1.2rem,3vw,2.2rem)}

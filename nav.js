@@ -8,6 +8,12 @@ var GRADOVI = [
   ["Osijek", "osijek.html", "aktivno"],
   ["Rijeka", "rijeka.html", "uskoro"]
 ];
+// Aktivni članovi po gradu: ukupna baza podijeljena 3:1 (Zagreb 3 dijela, Velika Gorica 1 dio).
+// Ukupan broj mora biti isti kao OPERATIVNA_BAZA u pokret.js.
+var BAZA = 4249;
+var ZG = Math.round(BAZA * 3 / 4);
+var CLANOVI = { "gorica.html": BAZA - ZG, "zagreb.html": ZG };
+function fmtBr(x) { return String(x).replace(/\B(?=(\d{3})+(?!\d))/g, "."); }
 // Slogani u dnu bočnog izbornika
 var SLOGANI = ["Dosta je šutnje.", "Vrijeme je za red.", "Čitaj zakone. Koristi ih."];
 // =====================================================
@@ -43,12 +49,13 @@ var SLOGANI = ["Dosta je šutnje.", "Vrijeme je za red.", "Čitaj zakone. Korist
   h += '<a href="provedba.html"' + (cur === "provedba.html" ? ' class="is-current"' : "") + ">07. Kako provodimo</a>";
   h += '<a href="blog.html"' + (blogOn ? ' class="is-current"' : "") + ">08. Blog</a>";
   h += '<a href="' + home + '#pristupnica">Pridruži se</a></div>';
-  h += '<div class="city-terminal"><div class="term-header">// LOKALNI FRONTOVI</div>';
+  h += '<div class="city-terminal"><div class="term-header">// LOKALNI FRONTOVI<span>članova</span></div>';
   GRADOVI.forEach(function (g) {
     var ime = g[0].toUpperCase();
     var c = (cur === g[1] || cur.indexOf(g[1].replace(".html", "-")) === 0) ? " is-current" : "";
-    if (g[2] === "hq") h += '<a href="' + g[1] + '" class="city-active' + c + '"><span class="blink">_</span>' + ime + " [HQ]</a>";
-    else if (g[2] === "aktivno") h += '<a href="' + g[1] + '" class="city-active' + c + '">&gt; ' + ime + " [AKTIVNO]</a>";
+    var cnt = CLANOVI[g[1]] ? '<span class="city-count" title="aktivnih članova">' + fmtBr(CLANOVI[g[1]]) + "</span>" : "";
+    if (g[2] === "hq") h += '<a href="' + g[1] + '" class="city-active' + c + '"><span class="city-name"><span class="blink">_</span>' + ime + " [HQ]</span>" + cnt + "</a>";
+    else if (g[2] === "aktivno") h += '<a href="' + g[1] + '" class="city-active' + c + '"><span class="city-name">&gt; ' + ime + " [AKTIVNO]</span>" + cnt + "</a>";
     else h += '<span class="city-pending">&middot; ' + ime + " (USKORO)</span>";
   });
   h += '</div><div class="slogans">';

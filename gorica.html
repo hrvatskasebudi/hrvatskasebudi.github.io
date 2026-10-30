@@ -11,12 +11,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"><meta name="theme-color" content="#0a0a0a">
 <link rel="stylesheet" href="style.css">
 <style>
-.hero-wall{max-width:none;margin:0 calc(-1*var(--pad)) 70px;padding:60px var(--pad) 70px;background:linear-gradient(rgba(10,10,10,.42),rgba(10,10,10,.55)),url(slike/velika-gorica-podloga.jpg) center/cover no-repeat;position:relative}
-@media(min-width:1100px){.hero-wall{margin-right:calc(-1*(var(--sb) + var(--pad)));padding-right:calc(var(--sb) + var(--pad))}}
-.hero-wall::before{content:"";position:absolute;inset:0;backdrop-filter:blur(1.4px);-webkit-backdrop-filter:blur(1.4px);pointer-events:none}
-.hero-wall>*{position:relative;z-index:1}
-.stamp-block{display:flex;justify-content:center;padding:2.5rem 1rem}
-.stamp-block img{width:min(320px,70vw);height:auto;opacity:.95}
+.hero-head{display:flex;align-items:center;gap:2rem;flex-wrap:wrap;margin-bottom:38px}
+.hero-logo{width:clamp(140px,18vw,240px);height:auto;flex:none;transform:rotate(-4deg)}
+.hero-head h1{margin:0;flex:1 1 320px}
 </style>
 </head>
 <body data-page="gorica">
@@ -24,7 +21,10 @@
 <section class="hero-wall" id="plakat">
 <a class="back-link" href="index.html">&lt; Natrag na glavni proglas</a>
 <div class="stamp-floating">Gorica se budi // Centrala</div>
+<div class="hero-head">
+<img class="hero-logo" src="slike/velika-gorica-se-budi.png" alt="Pečat Velika Gorica se budi" width="900" height="900">
 <h1>Velika Gorica<br><span>lokalni front.</span></h1>
+</div>
 <div class="hero-intro"><strong>Ovdje je centrala pokreta.</strong> Komunalni problemi, konkretni planovi za grad i objave iz našeg grada. Sve što ovdje piše provjerene su stvari koje se mogu napraviti, a nitko ih ne želi napraviti, pa ćemo ih mi, narod, zajedno sprovesti kad preuzmemo grad.</div>
 </section>
 <h2 class="list-head" id="inicijative">// Planovi za grad</h2>
@@ -34,7 +34,6 @@
 <a class="post" href="gorica-mrtvi-kapital.html"><span class="post-num">03</span><div><h2>Aktivacija „mrtvog kapitala“: gradske nekretnine u službi ljudi</h2><p class="post-sub">Plan za gradske nekretnine</p><p>Prazni gradski prostori propadaju, a udruge nemaju gdje raditi. Zagreb, Bjelovar i Rijeka već imaju rješenje, a mi ćemo ga provesti.</p><div class="fact-box"><span class="fact-badge">Gradske nekretnine</span><span class="fact-badge">Udruge</span><span class="fact-badge">Zakup</span></div><span class="read-more">Čitaj tekst &rarr; &middot; 3 min</span></div></a>
 <a class="post" href="gorica-voda.html"><span class="post-num">04</span><div><h2>Zaštita prava na vodu i kraj iskapčanja u Velikoj Gorici</h2><p class="post-sub">Plan za Veliku Goricu</p><p>Kuće ostaju bez vode, zgrade ne. Tri konkretna koraka koja provodimo u gradu i u VG Vodoopskrbi kad preuzmemo vlast.</p><div class="fact-box"><span class="fact-badge">Pravo na vodu</span><span class="fact-badge">VG Vodoopskrba</span><span class="fact-badge">Preuzimanje grada</span></div><span class="read-more">Čitaj tekst &rarr; &middot; 2 min</span></div></a>
 </div>
-<div class="stamp-block"><img src="slike/velika-gorica-se-budi.png" alt="Pečat Velika Gorica se budi" loading="lazy" width="900" height="900"></div>
 <section class="news-board" id="blog">
 <h2>// Objave iz Velike Gorice</h2>
 <!-- NOVA OBJAVA: kopiraj blok ispod i zalijepi ga IZNAD prve (najnovije na vrh); obriši red "Prve objave" kad dodaš prvu.

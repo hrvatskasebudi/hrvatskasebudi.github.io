@@ -25,9 +25,15 @@ a{color:inherit}
 .nav-links a.is-current{color:var(--text);border-left-color:var(--red)}
 .city-terminal{margin-top:26px;display:flex;flex-direction:column;gap:4px;font-family:var(--mono)}
 .term-header{font-size:10px;letter-spacing:3px;color:var(--red);margin-bottom:8px;text-transform:uppercase}
-.city-active{font-size:12px;font-weight:700;letter-spacing:1px;color:var(--red);text-decoration:none;padding:5px 0}
+.city-active{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:12px;font-weight:700;letter-spacing:1px;color:var(--red);text-decoration:none;padding:5px 0}
 .city-active:hover{text-decoration:underline;text-underline-offset:4px}
 .city-active.is-current{color:var(--text)}
+.term-header{display:flex;justify-content:space-between}
+.term-header span{color:#27c46b;letter-spacing:1px;text-transform:lowercase}
+.city-count{display:inline-flex;align-items:center;gap:7px;color:#27c46b;font-variant-numeric:tabular-nums;letter-spacing:.5px;animation:ccBlink 1.6s ease-in-out infinite}
+.city-count::before{content:"";width:7px;height:7px;border-radius:50%;background:#27c46b;animation:ccPulse 1.6s infinite}
+@keyframes ccBlink{50%{opacity:.4}}
+@keyframes ccPulse{0%{box-shadow:0 0 0 0 rgba(39,196,107,.65)}100%{box-shadow:0 0 0 8px rgba(39,196,107,0)}}
 .city-pending{font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#5a5a62;padding:5px 0}
 .sidefoot{margin-top:28px;font-family:var(--mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#5a5a62}
 .blink{animation:blinker 1s steps(1) infinite}
@@ -126,7 +132,7 @@ body{font-size:17px}
 .post-nav{grid-template-columns:1fr}
 .stream-item::before{top:-30px}
 }
-@media(prefers-reduced-motion:reduce){.blink{animation:none}html{scroll-behavior:auto}}
+@media(prefers-reduced-motion:reduce){.blink,.city-count,.city-count::before{animation:none}html{scroll-behavior:auto}}
 
 /* DODACI: lokalne inicijative, povezani tekstovi, napomene */
 .list-head{max-width:960px;font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(22px,2.6vw,32px);color:var(--text);margin:0 0 26px}
