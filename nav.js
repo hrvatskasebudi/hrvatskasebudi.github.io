@@ -2,17 +2,15 @@
 // status: "hq" ili "aktivno" = crveni link | "uskoro" = sivo, bez linka
 // Kad grad postane aktivan, promijeni samo riječ "uskoro" u "aktivno".
 var GRADOVI = [
-  ["Velika Gorica", "gorica.html", "hq"],
-  ["Zagreb", "zagreb.html", "aktivno"],
-  ["Split", "split.html", "uskoro"],
-  ["Osijek", "osijek.html", "aktivno"],
-  ["Rijeka", "rijeka.html", "uskoro"]
+  // ime, stranica, status, BROJ ČLANOVA (ručno prebrojano; null = ne prikazuje se broj)
+  ["Velika Gorica", "gorica.html", "hq", 1062],
+  ["Zagreb", "zagreb.html", "aktivno", 3187],
+  ["Split", "split.html", "uskoro", null],
+  ["Osijek", "osijek.html", "aktivno", 176],
+  ["Rijeka", "rijeka.html", "uskoro", null]
 ];
-// Aktivni članovi po gradu: ukupna baza podijeljena 3:1 (Zagreb 3 dijela, Velika Gorica 1 dio).
-// Ukupan broj mora biti isti kao OPERATIVNA_BAZA u pokret.js.
-var BAZA = 4249;
-var ZG = Math.round(BAZA * 3 / 4);
-var CLANOVI = { "gorica.html": BAZA - ZG, "zagreb.html": ZG };
+// KAKO AŽURIRATI BROJ: kad ručno prebrojite članove u gradu, upišite novi broj na kraju retka tog grada.
+// Broj se prikazuje zeleno i treperi uz ime grada (samo ako grad ima status "hq" ili "aktivno").
 function fmtBr(x) { return String(x).replace(/\B(?=(\d{3})+(?!\d))/g, "."); }
 // Slogani u dnu bočnog izbornika
 var SLOGANI = ["Dosta je šutnje.", "Vrijeme je za red.", "Čitaj zakone. Koristi ih."];
@@ -53,7 +51,7 @@ var SLOGANI = ["Dosta je šutnje.", "Vrijeme je za red.", "Čitaj zakone. Korist
   GRADOVI.forEach(function (g) {
     var ime = g[0].toUpperCase();
     var c = (cur === g[1] || cur.indexOf(g[1].replace(".html", "-")) === 0) ? " is-current" : "";
-    var cnt = CLANOVI[g[1]] ? '<span class="city-count" title="aktivnih članova">' + fmtBr(CLANOVI[g[1]]) + "</span>" : "";
+    var cnt = g[3] ? '<span class="city-count" title="članova (ručno prebrojano)">' + fmtBr(g[3]) + "</span>" : "";
     if (g[2] === "hq") h += '<a href="' + g[1] + '" class="city-active' + c + '"><span class="city-name"><span class="blink">_</span>' + ime + " [HQ]</span>" + cnt + "</a>";
     else if (g[2] === "aktivno") h += '<a href="' + g[1] + '" class="city-active' + c + '"><span class="city-name">&gt; ' + ime + " [AKTIVNO]</span>" + cnt + "</a>";
     else h += '<span class="city-pending">&middot; ' + ime + " (USKORO)</span>";
