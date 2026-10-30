@@ -5,9 +5,12 @@ Statični sajt (HTML/CSS) na GitHub Pages. Nema JS-a ni dodatnih mapa.
 - `index.html` – nacionalni proglas + oglasna ploča
 - `gorica.html`, `zagreb.html` – gradovi s blog sekcijom (`#blog`)
 - `nav.js` – izbornik i popis gradova (jedino mjesto za uređivanje)
-- `split.html`, `osijek.html`, `rijeka.html` – pripremljene stranice
+- `osijek.html` – aktivan grad (dvije objave: Orlovnjak i iseljavanje); `split.html`, `rijeka.html` – pripremljene stranice
 - `style.css` – dizajn (ne dirati)
 - `slike/` – fotografije za objave (napravi mapu kad zatreba)
+
+## Pravila pisanja
+Svi tekstovi pišu se u glasu "mi, narod, zajedno provodimo kad preuzmemo vlast". Bez crtica i povlaka u tekstovima. Podaci moraju imati naveden izvor.
 
 ## Nova objava u gradu
 Otvori stranicu grada, nađi komentar "NOVA OBJAVA", kopiraj blok `news-item`, zalijepi iznad prvog, promijeni datum/naslov/tekst.

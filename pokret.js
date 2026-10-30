@@ -68,7 +68,7 @@ var HSB = {
       .then(function (txt) {
         var d; try { d = JSON.parse(txt); } catch (x) { console.error("HSB: neočekivan odgovor poslužitelja:", txt.slice(0, 300)); return fail("Poslužitelj nije vratio valjan odgovor. Javite administratoru."); }
         if (!d.ok) { console.error("HSB: prijava odbijena:", d); return fail("Prijava nije prihvaćena. Provjeri sva obavezna polja i privolu."); }
-        form.innerHTML = '<div class="pk-thanks"><h3>' + (d.duplikat ? "Već si prijavljen/a." : "Prijava primljena.") + '</h3><p>' + (d.duplikat ? "Ovaj e-mail već je u našoj bazi. Hvala što si uz nas." : "Hvala. Upute stožera stižu na tvoj e-mail. Pokaži ovu stranicu još jednoj osobi.") + '</p></div>';
+        form.innerHTML = '<div class="pk-thanks"><h3>' + (d.duplikat ? "Već si prijavljen/a." : "Prijava primljena.") + '</h3><p>' + (d.duplikat ? "Ovaj email već je u našoj bazi. Hvala što si uz nas." : "Hvala. Upute stožera stižu na tvoj email. Pokaži ovu stranicu još jednoj osobi.") + '</p></div>';
         if (!d.duplikat) setTotal(real + 1);              // samo STVARNA nova prijava povećava brojač
         var t = document.getElementById("pristupnica"); if (t) t.scrollIntoView({ behavior: "smooth", block: "start" });
       })

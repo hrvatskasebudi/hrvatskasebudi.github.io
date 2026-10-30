@@ -5,7 +5,7 @@ var GRADOVI = [
   ["Velika Gorica", "gorica.html", "hq"],
   ["Zagreb", "zagreb.html", "aktivno"],
   ["Split", "split.html", "uskoro"],
-  ["Osijek", "osijek.html", "uskoro"],
+  ["Osijek", "osijek.html", "aktivno"],
   ["Rijeka", "rijeka.html", "uskoro"]
 ];
 // Slogani u dnu bočnog izbornika
@@ -48,11 +48,11 @@ var SLOGANI = ["Dosta je šutnje.", "Vrijeme je za red.", "Čitaj zakone. Korist
     var c = (cur === g[1] || cur.indexOf(g[1].replace(".html", "-")) === 0) ? " is-current" : "";
     if (g[2] === "hq") h += '<a href="' + g[1] + '" class="city-active' + c + '"><span class="blink">_</span>' + ime + " [HQ]</a>";
     else if (g[2] === "aktivno") h += '<a href="' + g[1] + '" class="city-active' + c + '">&gt; ' + ime + " [AKTIVNO]</a>";
-    else h += '<span class="city-pending">- ' + ime + " (USKORO)</span>";
+    else h += '<span class="city-pending">&middot; ' + ime + " (USKORO)</span>";
   });
   h += '</div><div class="slogans">';
   SLOGANI.forEach(function (s) { h += "<span>" + s + "</span>"; });
-  h += '</div><p class="sidefoot">Open-source građanski sustav</p></div>';
+  h += '</div><p class="sidefoot">Open source građanski sustav</p></div>';
 
   // Link na Politiku privatnosti u podnožju svake stranice (ako ga još nema)
   var ft = document.querySelector("footer");
