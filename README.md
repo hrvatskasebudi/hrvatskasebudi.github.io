@@ -5,7 +5,7 @@ Statični sajt (HTML/CSS) na GitHub Pages. Nema JS-a ni dodatnih mapa.
 - `index.html` – nacionalni proglas + oglasna ploča
 - `gorica.html`, `zagreb.html` – gradovi s blog sekcijom (`#blog`)
 - `nav.js` – izbornik i popis gradova (jedino mjesto za uređivanje)
-- `osijek.html` – aktivan grad (dvije objave: Orlovnjak i iseljavanje); `split.html`, `rijeka.html` – pripremljene stranice
+- `osijek.html`, `sisak.html` – aktivni gradovi (Osijek: Orlovnjak i iseljavanje; Sisak: dom nakon potresa); `split.html`, `rijeka.html` – pripremljene stranice
 - `style.css` – dizajn (ne dirati)
 - `slike/` – fotografije za objave (napravi mapu kad zatreba)
 

@@ -7,7 +7,8 @@ var GRADOVI = [
   ["Zagreb", "zagreb.html", "aktivno", 3187],
   ["Split", "split.html", "uskoro", null],
   ["Osijek", "osijek.html", "aktivno", 176],
-  ["Rijeka", "rijeka.html", "uskoro", null]
+  ["Rijeka", "rijeka.html", "uskoro", null],
+  ["Sisak", "sisak.html", "aktivno", 482]
 ];
 // KAKO AŽURIRATI BROJ: kad ručno prebrojite članove u gradu, upišite novi broj na kraju retka tog grada.
 // Broj se prikazuje zeleno i treperi uz ime grada (samo ako grad ima status "hq" ili "aktivno").
