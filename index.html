@@ -40,7 +40,12 @@
 .no-coalition-box h2{color:#fff;font-family:'Montserrat',sans-serif;font-weight:900;text-transform:uppercase;font-size:1.4rem;margin:0 0 1rem 0;line-height:1.2;letter-spacing:-0.5px}
 .target-box{padding:2.2rem;border:3px solid #555;background:#1a1a1a;color:#ccc;font-size:1.05rem;line-height:1.6;display:flex;flex-direction:column;justify-content:center;height:100%}
 .target-box h2{color:#ffc107;font-family:'Montserrat',sans-serif;font-weight:900;text-transform:uppercase;font-size:1.4rem;margin:0 0 1rem 0;line-height:1.2;letter-spacing:-0.5px}
-@media(max-width:900px){.hero-head{justify-content:center;text-align:center} .hero-split{grid-template-columns:1fr}}
+.movement-box{grid-column:1/-1;padding:2.6rem;border:3px solid var(--pk-red);background:linear-gradient(135deg,#1a0a0e 0%,#111 100%);color:#eee;font-size:1.1rem;line-height:1.7;box-shadow:inset 0 0 40px rgba(255,23,68,0.10)}
+.movement-box h2{color:var(--pk-red);font-family:'Montserrat',sans-serif;font-weight:900;text-transform:uppercase;font-size:clamp(1.6rem,4vw,2.6rem);margin:0 0 1.2rem 0;line-height:1.1}
+.movement-box p{margin:0 0 1rem 0;max-width:80ch}
+.movement-box .fact-box{margin:1rem 0 1.4rem 0}
+.movement-box .movement-punch{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(1.1rem,2.2vw,1.5rem);line-height:1.35;color:#fff;border-left:5px solid var(--pk-red);padding-left:1.2rem;margin-top:1.6rem}
+@media(max-width:900px){.hero-head{justify-content:center;text-align:center} .hero-split{grid-template-columns:1fr} .movement-box{padding:1.6rem}}
 </style>
 </head>
 <body data-page="index">
@@ -53,7 +58,7 @@
             <h1>Dosta je šutnje. <br><span>Vrijeme je za red.</span></h1>
         </div>
         
-        <!-- MOĆNA MREŽA 4 PRAVOKUTNIKA (2 GORE, 2 DOLJE) -->
+        <!-- MOĆNA MREŽA: 4 PRAVOKUTNIKA (2 GORE, 2 DOLJE) + TREĆI RED PREKO CIJELE ŠIRINE -->
         <div class="hero-split">
             <!-- 1. PRAVOKUTNIK (Uvod i status) -->
             <div class="hero-split-col">
@@ -92,9 +97,36 @@
             <div class="hero-split-col">
                 <div class="target-box">
                     <h2>Kraj iluzija i lažnih oporbi</h2>
-                    <p style="margin-bottom: 1rem;">Pratimo sve i razgovaramo sa svima, ali ne nasjedamo na predstave. Borbe stranke MOST i Marina Miletića izgubile su jasnu viziju; umjesto da rješavaju nemoć građana i mladih, svode se na pojedinačne i nebitne probleme sadašnjice.</p>
+                    <p style="margin-bottom: 1rem;">Pratimo sve i razgovaramo sa svima, ali ne nasjedamo na predstave. S nekim oporbenjacima slažemo se oko nekih stvari, a najviše sa strankom MOST: oni su u prosincu 2021. prikupili potpise za referendum, što pokazuje da narod ima pravo odlučivati izravno, a bavili su se i projektom za zaustavljanje iseljavanja mladih. Ali to ne znači da ih želimo s ovakvim stavom na čelu. Neka rade ono što narod želi, a ne pojedinačne i nebitne probleme sadašnjice.</p>
+                    <p style="margin-bottom: 1rem;">Dobro priznajemo i drugima. SDP traži pravo na stanovanje u Ustavu i nacionalni program javnih stanova za priuštivi najam, a to je blizu onome što tražimo za mlade. Možemo i SDP, koji zajedno vode Zagreb, najavljuju zatvaranje Jakuševca, što i mi tražimo, a zajedno vode i kampanju protiv inflacije. Domovinski pokret najavio je prikupljanje potpisa za referendum, iako je dio vlasti zajedno s HDZ. No ni to nije dovoljno: neka svi rade ono što narod želi.</p>
                     <p>S druge strane, HDZ i njihovog glavnog vođu mičemo s vlasti na izborima, mirno i zakonito. Nakon toga sve institucije rade isključivo za stanovništvo, a ne za njihove fotelje i interese. To ćemo napraviti mi, narod, zajedno!</p>
                 </div>
+            </div>
+
+            <!-- 5. TREĆI RED (preko cijele širine): Što narod želi -->
+            <div class="movement-box">
+                <h2>Ovo je što narod želi</h2>
+                <p>Ovo je ono za što se mi, kao narod, borimo i nećemo odustati. Ovo je naš Nacionalni program u 10 stupova i mi ćemo ga provesti. Ne odustajemo, ma koliko težak bio put, i spremni smo na odlučne, ali mirne i zakonite korake.</p>
+                <p>Kad se pročuje za nas, vlada i mediji prvi će negodovati. Mi smo na to spremni: odgovaramo mirno, tihim prosvjedima i građanskim angažmanom, u okvirima zakona. Gradovi se bude, a mi otvaramo lokalne frontove u Velikoj Gorici, Zagrebu i Osijeku.</p>
+                <p>Pozivamo stručne kadrove da nam se priključe i uvjereni smo da hoće:</p>
+                <div class="fact-box">
+                    <span class="fact-badge">Profesori</span>
+                    <span class="fact-badge">Ekonomisti</span>
+                    <span class="fact-badge">Liječnici i medicinske sestre</span>
+                    <span class="fact-badge">Pravnici</span>
+                    <span class="fact-badge">Inženjeri</span>
+                    <span class="fact-badge">Informatičari</span>
+                    <span class="fact-badge">Agronomi i poljoprivrednici</span>
+                    <span class="fact-badge">Učitelji i odgojitelji</span>
+                    <span class="fact-badge">Arhitekti i građevinari</span>
+                    <span class="fact-badge">Računovođe i revizori</span>
+                    <span class="fact-badge">Poduzetnici i obrtnici</span>
+                    <span class="fact-badge">Znanstvenici</span>
+                    <span class="fact-badge">Prometni stručnjaci</span>
+                    <span class="fact-badge">Socijalni radnici</span>
+                    <span class="fact-badge">Vatrogasci i spasioci</span>
+                </div>
+                <p class="movement-punch">Mi nismo šala, draga gospodo. Mi smo narod koji će uzeti svoje i pokazati vam kako se upravlja državom. Mi smo oni koji će vas hraniti, čak i kad vi nas niste htjeli.</p>
             </div>
         </div>
     </section>
