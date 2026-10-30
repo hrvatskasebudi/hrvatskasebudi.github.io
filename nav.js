@@ -9,7 +9,15 @@ var GRADOVI = [
   ["Osijek", "osijek.html", "aktivno", 176],
   ["Rijeka", "rijeka.html", "uskoro", null],
   ["Sisak", "sisak.html", "aktivno", 482],
-  ["Zadar", "zadar.html", "aktivno", 261]
+  ["Zadar", "zadar.html", "aktivno", 261],
+  ["Koprivnica", "koprivnica.html", "uskoro", null],
+  ["Požega", "pozega.html", "uskoro", null],
+  ["Karlovac", "karlovac.html", "uskoro", null],
+  ["Ogulin", "ogulin.html", "uskoro", null],
+  ["Pazin", "pazin.html", "uskoro", null],
+  ["Samobor", "samobor.html", "uskoro", null],
+  ["Varaždin", "varazdin.html", "uskoro", null],
+  ["Gospić", "gospic.html", "uskoro", null]
 ];
 // KAKO AŽURIRATI BROJ: kad ručno prebrojite članove u gradu, upišite novi broj na kraju retka tog grada.
 // Broj se prikazuje zeleno i treperi uz ime grada (samo ako grad ima status "hq" ili "aktivno").

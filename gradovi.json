@@ -4,5 +4,14 @@
 {"ime":"Osijek","status":"active","url":"osijek.html","oznaka":"[AKTIVNO]"},
 {"ime":"Split","status":"soon"},
 {"ime":"Rijeka","status":"soon"},
-{"ime":"Sisak","status":"active","url":"sisak.html","oznaka":"[AKTIVNO]"}
+{"ime":"Sisak","status":"active","url":"sisak.html","oznaka":"[AKTIVNO]"},
+{"ime":"Zadar","status":"active","url":"zadar.html","oznaka":"[AKTIVNO]"},
+{"ime":"Koprivnica","status":"soon"},
+{"ime":"Požega","status":"soon"},
+{"ime":"Karlovac","status":"soon"},
+{"ime":"Ogulin","status":"soon"},
+{"ime":"Pazin","status":"soon"},
+{"ime":"Samobor","status":"soon"},
+{"ime":"Varaždin","status":"soon"},
+{"ime":"Gospić","status":"soon"}
 ]
